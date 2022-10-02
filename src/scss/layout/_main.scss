@@ -1,0 +1,31 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.main {
+  background-color: var.$white;
+  padding: var.$spacing-5 3rem;
+  @include mix.bk-tablet {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+  &__title {
+    color: var.$primary-color;
+    text-align: center;
+    span {
+      display: block;
+      color: var.$secondary-color;
+      line-height: 2;
+      font-size: 1.8rem;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 10rem;
+      height: 10rem;
+      margin: 0 auto;
+      background-image: url(../img/cafe.svg);
+      background-size: 10rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'variables' as var;
+
+@mixin bk-mobile {
+  @media (min-width: var.$mobile) {
+    @content;
+  }
+}
+
+@mixin bk-tablet {
+  @media (min-width: var.$tablet) {
+    @content;
+  }
+}
+
+@mixin bk-desktop {
+  @media (min-width: var.$desktop) {
+    @content;
+  }
+}

@@ -1,0 +1,24 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.testimonials {
+  background-color: var.$white;
+  padding: 10rem 2rem;
+  margin-top: -5rem;
+  @include mix.bk-tablet {
+    padding: 10rem;
+  }
+  .testimony {
+    max-width: 50rem;
+    background-color: var.$light-brown;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+  }
+  .author {
+    color: var.$primary-color;
+    text-align: right;
+    font-family: var.$tertiary-font;
+    font-size: 2rem;
+  }
+}

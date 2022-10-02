@@ -1,0 +1,55 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.header {
+  &--contact {
+    background: url(../img/header_contacto.jpg);
+  }
+}
+
+.form {
+  &__container {
+    @include mix.bk-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var.$spacing-5;
+      background-image: url(../img/granos_cafe.jpg);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 40%;
+    }
+  }
+  &__camp {
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    input,
+    select {
+      &:not([type="submit"]) {
+        width: 100%;
+        border: .5rem solid var.$primary-color;
+        padding: 1rem;
+      }
+    }
+    input[type="submit"] {
+      width: 100%;
+      background-color: var.$primary-color;
+      border: none;
+      color: var.$white;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

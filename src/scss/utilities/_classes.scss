@@ -1,0 +1,11 @@
+@use 'variables' as var;
+
+.container {
+  width: 95% !important;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.center-text {
+  text-align: center;
+}

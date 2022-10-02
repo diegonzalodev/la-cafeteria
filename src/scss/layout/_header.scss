@@ -1,0 +1,53 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.header {
+  min-height: 60rem;
+  padding: var.$spacing-5 0;
+  position: relative;
+  &::before {
+    content: '';
+    background-color: var.$black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .6;
+  }
+  &__content {
+    position: relative;
+  }
+  &__bar {
+    display: flex;
+    flex-direction: column;
+    @include mix.bk-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    width: 50%;
+    margin: 0 auto;
+    @include mix.bk-tablet {
+      width: 20rem;
+      margin: 0;
+    }
+  }
+  &__title {
+    color: var.$white;
+    margin-top: var.$spacing-5;
+    text-align: center;
+    text-transform: uppercase;
+    @include mix.bk-tablet {
+      margin-top: 10rem;
+    }
+  }
+  &--inicio {
+    background-image: url(../img/header_inicio.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

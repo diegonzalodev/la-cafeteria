@@ -1,0 +1,8 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.header {
+  &--gallery {
+    background-image: url(../img/header_galeria.jpg);
+  }
+}

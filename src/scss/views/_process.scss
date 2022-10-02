@@ -1,0 +1,45 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.header {
+  &--process {
+    background-image: url(../img/header_proceso.jpg);
+  }
+}
+
+.process {
+  &__container {
+    margin-bottom: var.$spacing-5;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:nth-child(even) {
+      .process__image {
+        order: 2;
+      }
+    }
+    @include mix.bk-tablet {
+      display: flex;
+      align-items: center;
+      gap: var.$spacing-5;
+    }
+  }
+  &__image {
+    flex: 1;
+  }
+  &__text {
+    margin-top: 1rem;
+    flex: 1;
+    h3 {
+      margin: 0;
+      color: var.$primary-color;
+      &::after {
+        content: '';
+        width: 50%;
+        height: 5px;
+        display: block;
+        background-color: var.$secondary-color;
+      }
+    }
+  }
+}

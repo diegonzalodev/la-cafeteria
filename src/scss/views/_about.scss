@@ -1,0 +1,37 @@
+@use 'utilities/variables' as var;
+@use 'utilities/mixins' as mix;
+
+.header {
+  &--about {
+    background-image: url(../img/header_nosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.about {
+  &__content {
+    @include mix.bk-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    } 
+  }
+  &__image {
+    border: 3rem solid var.$white;
+    box-shadow: 9px 10px 5px -7px rgb(0 0 0 / .35);
+    margin-bottom: 5rem;
+    transform: rotate(-6deg);
+    @include mix.bk-tablet {
+      margin-bottom: 0;
+    }
+  }
+  &__text {
+    blockquote {
+      margin: 0;
+      padding: 1rem;
+      border-left: .5rem solid var.$primary-color;
+      font-size: 1.7rem;
+    }
+  }
+}
